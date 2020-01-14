@@ -70,31 +70,70 @@
 
 //*Function
 
-function soma(n1, n2) {
-  return n1 + n2;
+// function soma(n1, n2) {
+//   return n1 + n2;
+// }
+// function sub(n1, n2) {
+//   return n1 - n2;
+// }
+// function setReplace(frase, nome, novo_nome) {
+//   return frase.replace(nome, novo_nome);
+// }
+// var validar = 0;
+// function validaIdade(idade) {
+//   if (idade >= 18) {
+//     validar = true;
+//   } else {
+//     validar = false;
+//   }
+
+//   return validar;
+// }
+
+// console.log("Soma: " + soma(1, 5));
+// console.log("Sub: " + sub(1, 5));
+// console.log(setReplace("Vai Japão", "Japão", "Brasil"));
+
+// var idade = prompt("Qual sua Idade?");
+// console.log(validaIdade(idade));
+
+//*Onclick
+// function button() {
+//   alert("Obirgado por clicar!");
+// }
+
+//*innerHTML
+
+function button() {
+  document.getElementById("h3").innerHTML = "<b>Teste H3</b>";
 }
-function sub(n1, n2) {
-  return n1 - n2;
-}
-function setReplace(frase, nome, novo_nome) {
-  return frase.replace(nome, novo_nome);
-}
 
-function validaIdade(idade) {
-  var validar;
-
-  if (idade >= 18) {
-    validar = true;
-  } else {
-    validar = false;
-  }
-
-  return validar;
+//* Redirecionar
+function redirect() {
+  //window.open("https://www.google.com.br/");
+  window.location.href = "https://www.google.com.br/";
 }
 
-console.log("Soma: " + soma(1, 5));
-console.log("Sub: " + sub(1, 5));
-console.log(setReplace("Vai Japão", "Japão", "Brasil"));
+//*Eventos
 
-var idade = prompt("Qual sua Idade?");
-console.log(validaIdade(idade));
+function trocar(element) {
+  // document.getElementById("mousemove").innerHTML = "<b>Obrigado por passar o Mouse!</b>";
+  //alert("Trocar texto");
+  element.innerHTML = "<b>Obrigado por passar o Mouse!</b>";
+}
+
+function voltar(element) {
+  //document.getElementById("mousemove").innerHTML = "<b>Passa o Mouse aqui!</b>";
+  //alert("Trocar texto");
+  element.innerHTML = "<b>Passa o Mouse aqui!</b>";
+}
+
+//* Load
+function load() {
+  alert("Pagina carregada!");
+}
+
+//*OnChange
+function funChange(element) {
+  console.log(element.value);
+}

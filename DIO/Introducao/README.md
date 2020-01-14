@@ -24,3 +24,6 @@
 - innerHTML
 - onclick
 - onmouseover
+- onmouseout
+- onload
+- onchange
