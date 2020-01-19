@@ -100,11 +100,22 @@
 // console.log(masculino);
 
 //*Condição ternária
-var sexo = "M";
+// var sexo = "M";
 
-var result = sexo === "M" ? "Masculino" : "Feminono";
+// var result = sexo === "M" ? "Masculino" : "Feminono";
 
-console.log(result);
+// console.log(result);
 
 //*Estruturas de Repetição
+
+for (var i = 0; i <= 100; i++) {
+  console.log(i);
+}
+
+var j = 0;
+while (j <= 100) {
+  console.log(j);
+  j++;
+}
+
 //*intervalo e timeout
