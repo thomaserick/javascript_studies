@@ -44,29 +44,50 @@
 
 //*Condicionais
 
-function retornaSexo(sexo) {
-  //M,F
-  //Masculino|| Feminono
-  //==  Valores iguais
-  //=== Valores iguais e Tipos
-  //   if (sexo === "M") {
-  //     return "Masculino";
-  //   } else if (sexo == "F") {
-  //     return "Feminino";
-  //   } else {
-  //     return "Outro";
-  //   }
-  //   switch (sexo) {
-  //     case "M":
-  //       return "Masculino";
-  //     case "F":
-  //       return "Feminino";
-  //     default:
-  //       return "Outro";
-  //   }
-}
-console.log(retornaSexo("a"));
+// function retornaSexo(sexo) {
+//M,F
+//Masculino|| Feminono
+//==  Valores iguais
+//=== Valores iguais e Tipos
+//   if (sexo === "M") {
+//     return "Masculino";
+//   } else if (sexo == "F") {
+//     return "Feminino";
+//   } else {
+//     return "Outro";
+//   }
+//   switch (sexo) {
+//     case "M":
+//       return "Masculino";
+//     case "F":
+//       return "Feminino";
+//     default:
+//       return "Outro";
+//   }
+// }
+// console.log(retornaSexo("a"));
+
 //*Operadores Lógicos
+
+//AND,OR,NOT
+
+var sexo = "M",
+  idade = 23;
+
+if (sexo === "M" && idade >= 18) {
+  console.log("OK");
+}
+
+if (sexo === "M" || idade >= 18) {
+  console.log("OK");
+}
+
+if (sexo !== "M") {
+  console.log("OK");
+} else {
+  console.log("NOT");
+}
+
 //*Condição ternária
 //*Estruturas de Repetição
 //*intervalo e timeout
