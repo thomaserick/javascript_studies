@@ -71,34 +71,40 @@
 
 //AND,OR,NOT
 
-var sexo = "M",
-  idade = 23;
+// var sexo = "M",
+//   idade = 23;
 
-if (sexo === "M" && idade >= 18) {
-  console.log("OK");
-}
+// if (sexo === "M" && idade >= 18) {
+//   console.log("OK");
+// }
 
-if (sexo === "M" || idade >= 18) {
-  console.log("OK");
-}
+// if (sexo === "M" || idade >= 18) {
+//   console.log("OK");
+// }
 
-if (sexo !== "M") {
-  console.log("OK");
-} else {
-  console.log("NOT");
-}
+// if (sexo !== "M") {
+//   console.log("OK");
+// } else {
+//   console.log("NOT");
+// }
 
-var masculino = "M";
-if (sexo === "F") {
-  var masculino = true;
-} else {
-  var masculino = false;
-}
-console.log(masculino);
+// var masculino = "M";
+// if (sexo === "F") {
+//   var masculino = true;
+// } else {
+//   var masculino = false;
+// }
+// console.log(masculino);
 
-var masculino = sexo === "M";
-console.log(masculino);
+// var masculino = sexo === "M";
+// console.log(masculino);
 
 //*Condição ternária
+var sexo = "M";
+
+var result = sexo === "M" ? "Masculino" : "Feminono";
+
+console.log(result);
+
 //*Estruturas de Repetição
 //*intervalo e timeout
