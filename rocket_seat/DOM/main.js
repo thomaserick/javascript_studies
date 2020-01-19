@@ -15,15 +15,23 @@
 //   alert(text);
 // };
 
-//*Adiciona um Link
+//*Element
 
-var linkElement = document.createElement("a");
-linkElement.setAttribute("href", "http://www.google.com.br");
-linkElement.setAttribute("title", "Site da Google");
-var textElement = document.createTextNode("Acessar site Google");
-linkElement.appendChild(textElement);
-var containerElement = document.querySelector("#app");
-containerElement.appendChild(linkElement);
+// var linkElement = document.createElement("a");
+// linkElement.setAttribute("href", "http://www.google.com.br");
+// linkElement.setAttribute("title", "Site da Google");
+// var textElement = document.createTextNode("Acessar site Google");
+// linkElement.appendChild(textElement);
+// var containerElement = document.querySelector("#app");
+// containerElement.appendChild(linkElement);
 
-var inputElement = document.querySelector("#name");
-containerElement.removeChild(inputElement);
+// var inputElement = document.querySelector("#name");
+// containerElement.removeChild(inputElement);
+
+//*Alterando Stilos
+
+var boxElement = document.querySelector(".box");
+
+boxElement.style.width = 100;
+boxElement.style.height = 100;
+boxElement.style.backgroundColor = "#f00";
