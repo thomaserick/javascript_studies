@@ -108,14 +108,23 @@
 
 //*Estruturas de Repetição
 
-for (var i = 0; i <= 100; i++) {
-  console.log(i);
-}
+// for (var i = 0; i <= 100; i++) {
+//   console.log(i);
+// }
 
-var j = 0;
-while (j <= 100) {
-  console.log(j);
-  j++;
-}
+// var j = 0;
+// while (j <= 100) {
+//   console.log(j);
+//   j++;
+// }
 
 //*intervalo e timeout
+
+function exibeAlgo() {
+  console.log("helloWorld");
+}
+
+//1s
+//setInterval(exibeAlgo, 1000);
+//5s
+//setTimeout(exibeAlgo, 5000);
