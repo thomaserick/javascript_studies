@@ -32,12 +32,41 @@
 
 //*Funçoes
 
-function soma(n1, n2) {
-  var result = n1 + n2;
+// function soma(n1, n2) {
+//   var result = n1 + n2;
 
-  return result;
+//   return result;
+// }
+
+// var result = soma(1, 4);
+
+// console.log(result);
+
+//*Condicionais
+
+function retornaSexo(sexo) {
+  //M,F
+  //Masculino|| Feminono
+  //==  Valores iguais
+  //=== Valores iguais e Tipos
+  //   if (sexo === "M") {
+  //     return "Masculino";
+  //   } else if (sexo == "F") {
+  //     return "Feminino";
+  //   } else {
+  //     return "Outro";
+  //   }
+  //   switch (sexo) {
+  //     case "M":
+  //       return "Masculino";
+  //     case "F":
+  //       return "Feminino";
+  //     default:
+  //       return "Outro";
+  //   }
 }
-
-var result = soma(1, 4);
-
-console.log(result);
+console.log(retornaSexo("a"));
+//*Operadores Lógicos
+//*Condição ternária
+//*Estruturas de Repetição
+//*intervalo e timeout
