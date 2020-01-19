@@ -88,6 +88,17 @@ if (sexo !== "M") {
   console.log("NOT");
 }
 
+var masculino = "M";
+if (sexo === "F") {
+  var masculino = true;
+} else {
+  var masculino = false;
+}
+console.log(masculino);
+
+var masculino = sexo === "M";
+console.log(masculino);
+
 //*Condição ternária
 //*Estruturas de Repetição
 //*intervalo e timeout
