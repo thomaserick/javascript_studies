@@ -9,28 +9,37 @@
 //   }
 // };
 
-var minhaPromise = function() {
-  return new Promise(function(resolve, reject) {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://api.github.com/users/thomaserick");
-    xhr.send(null);
+// var minhaPromise = function() {
+//   return new Promise(function(resolve, reject) {
+//     var xhr = new XMLHttpRequest();
+//     xhr.open("GET", "https://api.github.com/users/thomaserick");
+//     xhr.send(null);
 
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          resolve(JSON.parse(xhr.responseText));
-        } else {
-          reject("Erro na requisição");
-        }
-      }
-    };
-  });
-};
+//     xhr.onreadystatechange = function() {
+//       if (xhr.readyState === 4) {
+//         if (xhr.status === 200) {
+//           resolve(JSON.parse(xhr.responseText));
+//         } else {
+//           reject("Erro na requisição");
+//         }
+//       }
+//     };
+//   });
+// };
 
-minhaPromise()
+// minhaPromise()
+//   .then(function(response) {
+//     console.log(response);
+//   })
+//   .catch(function(error) {
+//     console.warn(error);
+//   });
+
+axios
+  .get("https://api.github.com/users/thomaserick")
   .then(function(response) {
     console.log(response);
   })
   .catch(function(error) {
-    console.warn(error);
+    console.log(error);
   });
