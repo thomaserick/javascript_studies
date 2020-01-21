@@ -51,15 +51,46 @@
 
 //Const e Let
 
-const t = 30;
+// const t = 30;
 
-function teste(x) {
-  let y = 2;
+// function teste(x) {
+//   let y = 2;
 
-  if (x > 5) {
-    let y = 4;
-  }
-  console.log(x, y);
-}
+//   if (x > 5) {
+//     let y = 4;
+//   }
+//   console.log(x, y);
+// }
 
-teste();
+// teste();
+
+//Array
+
+const arr = [1, 3, 4, 5, 8, 9];
+
+//Map pecorre o Array
+const newArr = arr.map(function(item, index) {
+  return item + index;
+});
+console.log(newArr);
+
+const sum = arr.reduce(function(total, next) {
+  return total + next;
+});
+//0 -> 1
+//1 -> 3
+//4 -> 4
+console.log(sum);
+
+//Numeros Pares
+const filter = arr.filter(function(item) {
+  return item % 2 === 0;
+});
+console.log(filter);
+
+//Pesquisa no array
+
+const find = arr.find(function(item) {
+  return item === 4;
+});
+console.log(find);

@@ -42,16 +42,36 @@
 // }
 // console.log(Matematic.soma(2, 5));
 //Const e Let
-var t = 30;
+// const t = 30;
+// function teste(x) {
+//   let y = 2;
+//   if (x > 5) {
+//     let y = 4;
+//   }
+//   console.log(x, y);
+// }
+// teste();
+//Array
+var arr = [1, 3, 4, 5, 8, 9]; //Map pecorre o Array
 
-function teste(x) {
-  var y = 2;
+var newArr = arr.map(function (item, index) {
+  return item + index;
+});
+console.log(newArr);
+var sum = arr.reduce(function (total, next) {
+  return total + next;
+}); //0 -> 1
+//1 -> 3
+//4 -> 4
 
-  if (x > 5) {
-    var _y = 4;
-  }
+console.log(sum); //Numeros Pares
 
-  console.log(x, y);
-}
+var filter = arr.filter(function (item) {
+  return item % 2 === 0;
+});
+console.log(filter); //Pesquisa no array
 
-teste();
+var find = arr.find(function (item) {
+  return item === 4;
+});
+console.log(find);
