@@ -90,4 +90,30 @@
 //Arrow ->
 // const soma = (a = 0, b = 0) => a + b;
 // console.log(soma(2));
+//*Desestruturação
+// const usuario = {
+//   nome: "Thomas",
+//   idade: "30",
+//   endereco: {
+//     cidade: "Joinville",
+//     estado: "SC"
+//   }
+// };
+// // const nome = usuario.nome;
+// // const idade = usuario.idade;
+// // const cidade = usuario.endereco.cidade;
+// const {
+//   nome,
+//   idade,
+//   endereco: { cidade }
+// } = usuario;
+// console.log(nome);
+// console.log(idade);
+// console.log(cidade);
+// function mostraNome({ nome, idade }) {
+//   console.log(nome);
+//   console.log(idade);
+// }
+// mostraNome(usuario);
+//*
 "use strict";
