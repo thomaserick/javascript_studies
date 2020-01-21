@@ -151,7 +151,22 @@
 // const usuario2 = { ...usuario1, nome: "Joao" };
 // console.log(usuario2);
 //* Template Literals
+// const nome = "Thomas";
+// const idade = 30;
+// console.log("Meu nome é " + nome + " e tenho " + idade + " anos.");
+// console.log(`Menu nome é ${nome} e tenho ${idade} anos.`);
+//*Object short Syntax
 var nome = "Thomas";
 var idade = 30;
-console.log("Meu nome é " + nome + " e tenho " + idade + " anos.");
-console.log("Menu nome \xE9 ".concat(nome, " e tenho ").concat(idade, " anos."));
+var usuario = {
+  nome: nome,
+  idade: idade,
+  empresa: "GOV"
+};
+var usuario2 = {
+  nome: nome,
+  idade: idade,
+  empresa: "GOV"
+};
+console.log(usuario);
+console.log(usuario2);

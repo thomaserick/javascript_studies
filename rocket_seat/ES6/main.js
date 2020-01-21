@@ -198,8 +198,27 @@
 
 //* Template Literals
 
+// const nome = "Thomas";
+// const idade = 30;
+
+// console.log("Meu nome é " + nome + " e tenho " + idade + " anos.");
+// console.log(`Menu nome é ${nome} e tenho ${idade} anos.`);
+
+//*Object short Syntax
+
 const nome = "Thomas";
 const idade = 30;
 
-console.log("Meu nome é " + nome + " e tenho " + idade + " anos.");
-console.log(`Menu nome é ${nome} e tenho ${idade} anos.`);
+const usuario = {
+  nome: nome,
+  idade: idade,
+  empresa: "GOV"
+};
+const usuario2 = {
+  nome,
+  idade,
+  empresa: "GOV"
+};
+
+console.log(usuario);
+console.log(usuario2);
