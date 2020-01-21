@@ -66,31 +66,56 @@
 
 //Array
 
-const arr = [1, 3, 4, 5, 8, 9];
+// const arr = [1, 3, 4, 5, 8, 9];
 
-//Map pecorre o Array
-const newArr = arr.map(function(item, index) {
-  return item + index;
-});
-console.log(newArr);
+//*Map pecorre o Array
+// const newArr = arr.map(function(item, index) {
+//   return item + index;
+// });
+// console.log(newArr);
 
-const sum = arr.reduce(function(total, next) {
-  return total + next;
-});
-//0 -> 1
-//1 -> 3
-//4 -> 4
-console.log(sum);
+// const sum = arr.reduce(function(total, next) {
+//   return total + next;
+// });
+////0 -> 1
+////1 -> 3
+////4 -> 4
+// console.log(sum);
 
-//Numeros Pares
-const filter = arr.filter(function(item) {
-  return item % 2 === 0;
-});
-console.log(filter);
+//*Numeros Pares
+// const filter = arr.filter(function(item) {
+//   return item % 2 === 0;
+// });
+// console.log(filter);
 
-//Pesquisa no array
+//*Pesquisa no array
 
-const find = arr.find(function(item) {
-  return item === 4;
-});
-console.log(find);
+// const find = arr.find(function(item) {
+//   return item === 4;
+// });
+// console.log(find);
+
+//*Arrow Functions
+// const arr = [1, 3, 4, 5, 6];
+
+// //const newArr = arr.map(function(item) {
+// //  return item * 2;
+// //});
+
+// const newArr = arr.map(item => item * 1);
+// console.log(newArr);
+
+// //Objetos
+// const teste = () => ({ nome: "Thomas" });
+
+// console.log(teste());
+
+//* Valores Padrão
+
+// function soma(a = 0, b = 0) {
+//   return a + b;
+// }
+//Arrow ->
+// const soma = (a = 0, b = 0) => a + b;
+
+// console.log(soma(2));
