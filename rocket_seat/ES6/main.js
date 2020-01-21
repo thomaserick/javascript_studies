@@ -186,12 +186,20 @@
 // const arr3 = [...arr1, ...arr2];
 // console.log(arr3);
 
-const usuario1 = {
-  nome: "Thomas",
-  idade: 30,
-  empresa: "GOV"
-};
+// const usuario1 = {
+//   nome: "Thomas",
+//   idade: 30,
+//   empresa: "GOV"
+// };
 
-const usuario2 = { ...usuario1, nome: "Joao" };
+// const usuario2 = { ...usuario1, nome: "Joao" };
 
-console.log(usuario2);
+// console.log(usuario2);
+
+//* Template Literals
+
+const nome = "Thomas";
+const idade = 30;
+
+console.log("Meu nome é " + nome + " e tenho " + idade + " anos.");
+console.log(`Menu nome é ${nome} e tenho ${idade} anos.`);
