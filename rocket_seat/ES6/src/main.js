@@ -1,8 +1,28 @@
-//import * as funcoes from './functions'; Importa todas
-//import { soma, sub } from "./functions.js";
-import soma, { sub } from "./functions.js";
-import sum from "./src/sum.js";
+const minhaPromise = () =>
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("OK");
+    }, 2000);
+  });
 
-console.log(soma(1, 2));
-console.log(sub(1, 3));
-console.log(sum(1, 3));
+// minhaPromise()
+//   .then(response => {
+//     console.log(response);
+//   })
+//   .catch(err => {
+//     console.log(err);
+//   });
+
+// async function executaPromise() {
+//   console.log(await minhaPromise());
+//   console.log(await minhaPromise());
+//   console.log(await minhaPromise());
+// }
+
+const executaPromise = async () => {
+  console.log(await minhaPromise());
+  console.log(await minhaPromise());
+  console.log(await minhaPromise());
+};
+
+executaPromise();

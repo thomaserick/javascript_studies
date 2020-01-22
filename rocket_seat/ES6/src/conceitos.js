@@ -206,19 +206,19 @@
 
 //*Object short Syntax
 
-const nome = "Thomas";
-const idade = 30;
+// const nome = "Thomas";
+// const idade = 30;
 
-const usuario = {
-  nome: nome,
-  idade: idade,
-  empresa: "GOV"
-};
-const usuario2 = {
-  nome,
-  idade,
-  empresa: "GOV"
-};
+// const usuario = {
+//   nome: nome,
+//   idade: idade,
+//   empresa: "GOV"
+// };
+// const usuario2 = {
+//   nome,
+//   idade,
+//   empresa: "GOV"
+// };
 
-console.log(usuario);
-console.log(usuario2);
+// console.log(usuario);
+// console.log(usuario2);
