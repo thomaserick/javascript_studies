@@ -4,10 +4,22 @@
 
 ### Aprendizado
 
--Secões
--Básico
--Lógica de programação
--Funções(Avançado)
+- Secões:
+  - Básico
+  - Lógica de programação
+  - Funções
+  - Arrays
+  - Objetos e prototypes
+  - Classes
+  - Assíncrono
+  - Tooling e ES6 modules
+  - NodeJS
+  - Projeto Agenda(MongoDB)
+  - Deploy Google Clound
+  - API REST
+  - React
+  - Reac + Redux
+  - Expressões regulares (REGEX)
 
 ##Configuração
 
