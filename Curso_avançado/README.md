@@ -5,10 +5,9 @@
 ### Aprendizado
 
 -Secões
-	-Basico
-	-Lógica de programação
-	-Funções(Avançado)
-
+-Básico
+-Lógica de programação
+-Funções(Avançado)
 
 ##Configuração
 
