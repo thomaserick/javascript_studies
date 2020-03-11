@@ -1,3 +1,4 @@
+//Variaveis Let e Var
 let name = "Joao";
 var name2 = "Variavel";
 
