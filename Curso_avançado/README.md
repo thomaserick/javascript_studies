@@ -27,3 +27,9 @@
 - yarn add @babel/cli
 - yarn add @babel/core
 - yarn add @babel/preset-env
+
+**Helpers**
+
+- [Format GitHub](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
+
+- [W3School](https://www.w3schools.com/js/default.asp)
