@@ -6,7 +6,40 @@
 
 - Secões:
   - Básico
+    - console
+    - repositório
+    - comentários
+    - Html + JS
+    - Constantes (const)
+    - Variaveis Let e Var
+    - Tipos primitivos
+    - Operadores aritméticos
+    - alert,confirm e prompt
+    - numbers
+    - Objeto Math
+    - Arrays
+    - Funções
+    - Objetos
+    - Valores primitivos e valores por referencia
+    - Exercícios
   - Lógica de programação
+    - Operadores de comparação
+    - Operadores Lógicos
+    - Short-Circuit
+    - if/if else
+    - operação ternária
+    - objeto Date
+    - Switch/case
+    - Diferença var/let/const
+    - DOM
+    - For classico
+    - For in
+    - For of
+    - NodeList
+    - While/Do while
+    - Break/Continue
+    - Try,catch,finally
+    - Exercícios
   - Funções
   - Arrays
   - Objetos e prototypes
