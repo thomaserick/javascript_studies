@@ -1,4 +1,4 @@
-//Declaracao de função (Funcstion hoisting) -> Eleva as declarações no topo as VAR
+//Declaracao de função (Function hoisting) -> Eleva as declarações no topo as VAR
 
 falaOi();
 
