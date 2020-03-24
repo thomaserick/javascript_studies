@@ -40,7 +40,18 @@
     - Break/Continue
     - Try,catch,finally
     - Exercícios
-  - Funções
+  - Funções (Avançada)
+    - Maneiras de declarar funções
+    - Parâmetros da função
+    - Retorno da função
+    - Escopo Léxico
+    - Clousure
+    - Funções de callback
+    - Funções imediatas(IIFE)
+    - Factory functions
+    - Constructor functions
+    - Funções recursivas
+    - Funções geradoras
   - Arrays
   - Objetos e prototypes
   - Classes
