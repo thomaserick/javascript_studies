@@ -68,6 +68,10 @@
 
   - Mostrando o registro passando filtro
 
+- db.billingCycles.find({credits:{\$exists:true},{\_id:0,name:1}})
+
+  - Mostra os registros apenas com o atributos que gostaria "name"
+
 - db.billingCycles.find({\$or:[{month:1},{monsth:2}]})
 
   - Monstra os registros OU sobre dois critérios
@@ -96,6 +100,12 @@
   }])
 
   - Soma de todo os creditos e debitos
+
+* Update
+
+- db.billingCycles.update({
+  $and:[{month:1},{year:2017}]
+},{$set{credits:[{name:"Salário",value:5000}]}})
 
 **Helpers**
 
