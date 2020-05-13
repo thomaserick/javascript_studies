@@ -11,6 +11,8 @@
 
 - Orientado a Documento
 - Usa Json
+- Tabelas -> Collections
+- Registros/Tuplas -> Documentos (objetos Json)
 
 * Instalação
 
@@ -28,4 +30,7 @@
   - Cria Collection
 - db.billingCycles.drop()
   - Remove Collection
--
+- db.billingCycles.insert({})
+  - Inseri registro
+- db.billingCycles.save({})
+  - Salva/atualiza registro
