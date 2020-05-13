@@ -107,6 +107,25 @@
   $and:[{month:1},{year:2017}]
 },{$set{credits:[{name:"Salário",value:5000}]}})
 
+* Count
+
+- db.billingCycles.count()
+  - Conta os registros da Tabela(collection)
+
+* Remove
+
+- db.billingCycles.remove({month:2})
+
+  - Remove os regisotr com filtro
+
+- db.billingCycles.remove({year:2},1)
+  - Remove os registro com filtro e limitando apenas a 1 registro
+
+* Drop
+
+- db.dropDatabase()
+  - Remove os bancos de dados
+
 **Helpers**
 
 - [Format GitHub](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
