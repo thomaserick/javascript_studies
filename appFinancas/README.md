@@ -7,7 +7,9 @@
 - AngularJs
 - NodeJs
 
-### MongoDB NoSQL
+## MongoDB NoSQL
+
+[documentação]: (https://docs.mongodb.com/)
 
 - Orientado a Documento
 - Usa Json
@@ -20,34 +22,81 @@
   - C:\Program Files\MongoDB\Server\3.4\bin
   - Testar o comando -> cmd -> mongod
 
-* Comandos
+### Comandos
 
-- show dbs
+- Comandos Básicos
+
+* show dbs
+
   - Mostra quantas base
+
 - use db_finance
   - Troca o banco de dados
+
+* Comandos Insert
+
 - db.createCollection('billingCycles')
+
   - Cria Collection
+
 - db.billingCycles.drop()
+
   - Remove Collection
+
 - db.billingCycles.insert({})
+
   - Inseri registro
+
 - db.billingCycles.save({})
   - Salva/atualiza registro
+
+* Pesquisa
+
 - db.billingCycles.find()
+
   - Localiza os registros dentro da collections
+
 - db.billingCycles.find.pretty()
+
   - Mostra de forma mais legivel
+
 - db.billingCycles.findOne()
+
   - Mostra o primeiro registro
+
 - db.billingCycles.findOne({month:2})
+
   - Mostrando o registro passando filtro
+
 - db.billingCycles.find({\$or:[{month:1},{monsth:2}]})
+
   - Monstra os registros OU sobre dois critérios
+
 - db.billingCycles.find({credits:{\$exists:true}}).pretty()
+
   - Apenas os registros que possui o atributo credits
+
 - db.billingCycles.find({year:2017}).skip(1).pretty()
+
   - Pula o primeiro registro
+
 - db.billingCycles.find({year:2017}).skip(1).limit(1)
   - Pula o primeiro registro e traz apenas o primeiro elemento
   - Fazer paginação
+
+* Agregação
+
+- db.billingCycles.aggregate([{
+  $project:{credit:{$sum:"$credtis.value"},deb:{$sum:"$debts.value"}}
+  },{
+  $group:{
+  _id: null,
+  credit:{$sum:"$credit"}, debt:{$sum:"$debt"}
+  }
+  }])
+
+  - Soma de todo os creditos e debitos
+
+**Helpers**
+
+- [Format GitHub](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
