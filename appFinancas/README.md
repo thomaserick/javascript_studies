@@ -128,6 +128,20 @@
 
 ## NodeJs
 
+- Instalação
+
+* npm init
+  - Inicia o projeto
+* npm i express
+  - instala a dependencia do express
+
+## AngularJs
+
+- Instalação
+
+* npm init
+  - Inicia o projeto
+
 **Helpers**
 
 - [Format GitHub](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
