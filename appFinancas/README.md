@@ -146,6 +146,21 @@
 - npm install angular@1.7.9
   - Versao angular
 
+## BackEnd
+
+### Dependencias
+
+- npm install express
+- npm install express-query-int
+- npm install body-parse
+- npm install mongoose
+- npm install mongoose-paginate
+- npm install lodash
+- npm install pm2
+
+- npm install nodemon --save-dev
+  - Apenas para desenvolvimento ( quadno tiver algum crash reinstarta a aplicação)
+
 **Helpers**
 
 - [Format GitHub](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
