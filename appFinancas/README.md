@@ -150,9 +150,13 @@
 
 ### Dependencias
 
+- remover npm uninstall <nome_pacote>
+  - Romover dependências
 - npm install express
+  - Framework web
 - npm install express-query-int
-- npm install body-parse
+- npm install body-parser
+  - É um midllewere, o bodyparse usa o parse da requisição, transforma em objetos
 - npm install mongoose
 - npm install mongoose-paginate
 - npm install lodash
