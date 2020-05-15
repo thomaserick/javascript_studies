@@ -139,8 +139,12 @@
 
 - Instalação
 
-* npm init
+- npm init
+
   - Inicia o projeto
+
+- npm install angular@1.7.9
+  - Versao angular
 
 **Helpers**
 
