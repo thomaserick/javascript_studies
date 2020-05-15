@@ -139,8 +139,31 @@
 
 - Instalação
 
-* npm init
+- npm init
+
   - Inicia o projeto
+
+- npm install angular@1.7.9
+  - Versao angular
+
+## BackEnd
+
+### Dependencias
+
+- remover npm uninstall <nome_pacote>
+  - Romover dependências
+- npm install express
+  - Framework web
+- npm install express-query-int
+- npm install body-parser
+  - É um midllewere, o bodyparse usa o parse da requisição, transforma em objetos
+- npm install mongoose
+- npm install mongoose-paginate
+- npm install lodash
+- npm install pm2
+
+- npm install nodemon --save-dev
+  - Apenas para desenvolvimento ( quadno tiver algum crash reinstarta a aplicação)
 
 **Helpers**
 
