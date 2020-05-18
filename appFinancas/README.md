@@ -161,6 +161,7 @@
 - npm install mongoose-paginate
 - npm install lodash
 - npm install pm2
+- npm node-restful
 
 - npm install nodemon --save-dev
   - Apenas para desenvolvimento ( quadno tiver algum crash reinstarta a aplicação)
