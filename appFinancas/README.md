@@ -170,6 +170,17 @@
 - npm run dev
   - Rodar o Servidor
 
+## FrondEnd
+
+### Dependencias
+
+- npm ini
+
+  - Inicia
+
+- npm i
+  - Instala todas as dependencias no package.json
+
 **Helpers**
 
 - [Format GitHub](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
