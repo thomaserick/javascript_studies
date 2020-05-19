@@ -151,7 +151,9 @@
 ### Dependencias
 
 - remover npm uninstall <nome_pacote>
+
   - Romover dependências
+
 - npm install express
   - Framework web
 - npm install express-query-int
@@ -174,7 +176,7 @@
 
 ### Dependencias
 
-- npm ini
+- npm init
 
   - Inicia
 
