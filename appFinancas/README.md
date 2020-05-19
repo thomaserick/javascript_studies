@@ -164,7 +164,11 @@
 - npm node-restful
 
 - npm install nodemon --save-dev
+
   - Apenas para desenvolvimento ( quadno tiver algum crash reinstarta a aplicação)
+
+- npm run dev
+  - Rodar o Servidor
 
 **Helpers**
 
