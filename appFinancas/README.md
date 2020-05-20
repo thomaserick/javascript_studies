@@ -163,6 +163,7 @@
 - npm install mongoose-paginate
 - npm install lodash
 - npm install pm2
+  - Gerenciador de pacote do nodeJs para produção monitoramento
 - npm node-restful
 
 - npm install nodemon --save-dev
@@ -170,7 +171,15 @@
   - Apenas para desenvolvimento ( quadno tiver algum crash reinstarta a aplicação)
 
 - npm run dev
+
   - Rodar o Servidor
+
+- Producao com PM2
+
+  - npm run production
+
+- Deleta o servidor
+  - pm2 delete backend
 
 ## FrondEnd
 
