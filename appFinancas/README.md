@@ -194,4 +194,6 @@
 
 **Helpers**
 
+- [Angular_Style_Guide](https://github.com/johnpapa/angular-styleguide)
+
 - [Format GitHub](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
