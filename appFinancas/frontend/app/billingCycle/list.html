@@ -15,10 +15,16 @@
         <td>{{billingCycle.year}}</td>
         <td class="table-actions">
           <button class="btn btn-warning" title="Editar">
-            <i class="fa fa-pencil"></i>
+            <i
+              class="fa fa-pencil"
+              ng-click="bcCtrl.showTabUpdate(billingCycle)"
+            ></i>
           </button>
           <button class="btn btn-danger" title="Deletar">
-            <i class="fa fa-trash-o"></i>
+            <i
+              class="fa fa-trash-o"
+              ng-click="bcCtrl.showTabDelete(billingCycle)"
+            ></i>
           </button>
         </td>
       </tr>

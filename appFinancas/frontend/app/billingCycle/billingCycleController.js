@@ -1,9 +1,14 @@
 (function () {
   angular
     .module("App")
-    .controller("BillingCycleCtrl", ["$http", "msgs", BillingCycleController]);
+    .controller("BillingCycleCtrl", [
+      "$http",
+      "msgs",
+      "tabs",
+      BillingCycleController,
+    ]);
 
-  function BillingCycleController($http, msgs) {
+  function BillingCycleController($http, msgs, tabs) {
     const _self = this;
     const url = `http://localhost:3003/api/billingCycles`;
 
@@ -23,7 +28,18 @@
       $http.get(url).then(function (response) {
         _self.billingCycle = {};
         _self.billingCycles = response.data;
+        tabs.show(_self, { tabList: true, tabCreate: true });
       });
+    };
+
+    _self.showTabUpdate = function (billingCycle) {
+      _self.billingCycle = billingCycle;
+      tabs.show(_self, { tabUpdate: true });
+    };
+
+    _self.showTabDelete = function (billingCycle) {
+      _self.billingCycle = billingCycle;
+      tabs.show(_self, { tabDelete: true });
     };
 
     _self.refresh();
