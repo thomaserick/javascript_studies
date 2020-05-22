@@ -1,20 +1,22 @@
 (function () {
   angular
     .module("App")
-    .controller("BillingCycleCtrl", ["$http", BillingCycleController]);
+    .controller("BillingCycleCtrl", ["$http", "msgs", BillingCycleController]);
 
-  function BillingCycleController($http) {
+  function BillingCycleController($http, msgs) {
     const _self = this;
 
     _self.createBillingCycle = function () {
       const url = `http://localhost:3003/api/billingCycles`;
       $http
         .post(url, _self.billingCycle)
-        .then(function (res) {
-          console.log('Sucesso"');
+        .then(function (response) {
+          _self.billingCycle = {};
+          msgs.addSuccess("Operação realizada com sucesso");
         })
-        .catch(function (res) {
-          console.log('Error"');
+        .catch(function (resp) {
+          console.log(resp);
+          msgs.addError(resp.data.errors);
         });
     };
   }
