@@ -36,7 +36,13 @@
     >
       Incluir
     </button>
-    <button class="btn btn-info" ng-if="bcCtrl.tabUpdate">Alterar</button>
+    <button
+      class="btn btn-info"
+      ng-if="bcCtrl.tabUpdate"
+      ng-click="bcCtrl.updateBillingCycle()"
+    >
+      Alterar
+    </button>
     <button
       class="btn btn-danger"
       ng-if="bcCtrl.tabDelete"

@@ -2,6 +2,8 @@ const _ = require("lodash");
 const BillingCycle = require("./billingCycle");
 
 BillingCycle.methods(["get", "post", "put", "delete"]);
+
+//configuração para forçar a execução das validações
 BillingCycle.updateOptions({ new: true, runValidators: true });
 
 BillingCycle.after("post", sendErrorsOrNext).after("put", sendErrorsOrNext);
