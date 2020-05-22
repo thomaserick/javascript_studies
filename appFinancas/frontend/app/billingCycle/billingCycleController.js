@@ -42,6 +42,19 @@
       tabs.show(_self, { tabDelete: true });
     };
 
+    _self.deleteBillingCycle = function () {
+      const deleteUrl = `${url}/${_self.billingCycle._id}`;
+      $http
+        .delete(deleteUrl, _self.billingCycle)
+        .then(function (response) {
+          _self.refresh();
+          msgs.addSuccess("Operação realizada com Sucesso!");
+        })
+        .catch(function (resp) {
+          msgs.addError(resp.data.errors);
+        });
+    };
+
     _self.refresh();
   }
 })();

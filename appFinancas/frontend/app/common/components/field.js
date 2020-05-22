@@ -5,8 +5,9 @@
       label: "@",
       grid: "@",
       placeholder: "@",
-      type: "@",
-      model: "=",
+      type: "@", //String
+      model: "=", //expressão que vai ser resolvida dentor do componente
+      readonly: "<", //Sentido unico do parent para dentro do componente
     },
     controller: [
       "gridSystem",
@@ -19,7 +20,7 @@
     <div class="{{ $ctrl.gridClasses }}">
       <div class="form-group">
         <label for="{{ $ctrl.id}}">{{$ctrl.label}}</label>
-        <input type="{{ $ctrl.type}}" id="{{$ctrl.id}}" class="form-control" placeholder="{{ $ctrl.placeholder}}" ng-model="$ctrl.model" />
+        <input type="{{ $ctrl.type}}" id="{{$ctrl.id}}" class="form-control" placeholder="{{ $ctrl.placeholder}}" ng-model="$ctrl.model" ng-readonly="$ctrl.readonly" />
       </div>
     </div>
     `,

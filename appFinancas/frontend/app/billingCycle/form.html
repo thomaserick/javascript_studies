@@ -7,6 +7,7 @@
       grid="12 6 4"
       placeholder="Informe o Nome"
       model="bcCtrl.billingCycle.name"
+      readonly="bcCtrl.tabDelete"
     ></field>
     <field
       type="number"
@@ -15,6 +16,7 @@
       grid="12 6 4"
       placeholder="Informe o Mês"
       model="bcCtrl.billingCycle.month"
+      readonly="bcCtrl.tabDelete"
     ></field>
     <field
       type="number"
@@ -23,6 +25,7 @@
       grid="12 6 4"
       placeholder="Informe o Ano"
       model="bcCtrl.billingCycle.year"
+      readonly="bcCtrl.tabDelete"
     ></field>
   </div>
   <div class="box-footer">
@@ -34,8 +37,14 @@
       Incluir
     </button>
     <button class="btn btn-info" ng-if="bcCtrl.tabUpdate">Alterar</button>
-    <button class="btn btn-danger" ng-if="bcCtrl.tabDelete">Exluir</button>
-    <button class="btn btn-default" ng-click="bcCtrl.refresh()">
+    <button
+      class="btn btn-danger"
+      ng-if="bcCtrl.tabDelete"
+      ng-click="bcCtrl.deleteBillingCycle()"
+    >
+      Exluir
+    </button>
+    <button class="btn btn-default" ng-click="bcCtrl.refresh() ">
       Cancelar
     </button>
   </div>
