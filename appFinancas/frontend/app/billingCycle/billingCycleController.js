@@ -26,7 +26,7 @@
 
     _self.refresh = function () {
       $http.get(url).then(function (response) {
-        _self.billingCycle = {};
+        _self.billingCycle = { credits: [{}], debts: [{}] };
         _self.billingCycles = response.data;
         tabs.show(_self, { tabList: true, tabCreate: true });
       });
