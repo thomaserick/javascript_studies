@@ -24,7 +24,7 @@
             class="form-control"
             placeholder="Informe o Valor"
             ng-readonly="bcCtrl.tabDelete"
-            typer="number"
+            type="number"
           />
         </td>
         <td class="table-actions">
@@ -32,6 +32,7 @@
             class="btn btn-success"
             title="Incluir"
             ng-class="{disable: bcCtrl.tabDelete}"
+            ng-click="bcCtrl.addCredit($index)"
           >
             <i class="fa fa-plus"></i>
           </button>
@@ -40,6 +41,7 @@
             class="btn btn-warning"
             title="Copiar"
             ng-class="{disable: bcCtrl.tabDelete}"
+            ng-click="bcCtrl.cloneCredit($index,credit)"
           >
             <i class="fa fa-clone"></i>
           </button>
@@ -48,6 +50,7 @@
             class="btn btn-danger"
             title="Excluir"
             ng-class="{disable: bcCtrl.tabDelete}"
+            ng-click="bcCtrl.deleteCredit($index)"
           >
             <i class="fa fa-trash-o"></i>
           </button>

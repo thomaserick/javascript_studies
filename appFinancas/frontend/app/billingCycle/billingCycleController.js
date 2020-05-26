@@ -68,6 +68,42 @@
         });
     };
 
+    //--Credits
+
+    //Incluir
+    _self.addCredit = (index) => {
+      _self.billingCycle.credits.splice(index + 1, 0, {});
+    };
+
+    //Copiar
+    _self.cloneCredit = (index, { name, value }) => {
+      _self.billingCycle.credits.splice(index + 1, 0, { name, value });
+    };
+    //Delete
+    _self.deleteCredit = (index) => {
+      if (_self.billingCycle.credits.length > 1) {
+        _self.billingCycle.credits.splice(index, 1);
+      }
+    };
+
+    //--Debts
+
+    //Incluir
+    _self.addDebt = (index) => {
+      _self.billingCycle.debts.splice(index + 1, 0, {});
+    };
+
+    //Copiar
+    _self.cloneDebt = (index, { name, value, status }) => {
+      _self.billingCycle.debts.splice(index + 1, 0, { name, value, status });
+    };
+    //Delete
+    _self.deleteDebt = (index) => {
+      if (_self.billingCycle.debts.length > 1) {
+        _self.billingCycle.debts.splice(index, 1);
+      }
+    };
+
     _self.refresh();
   }
 })();
