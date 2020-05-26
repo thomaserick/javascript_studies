@@ -3,14 +3,16 @@
     .module("App")
     .controller("BillingCycleCtrl", [
       "$http",
+      "$location",
       "msgs",
       "tabs",
       BillingCycleController,
     ]);
 
-  function BillingCycleController($http, msgs, tabs) {
+  function BillingCycleController($http, $location, msgs, tabs) {
     const _self = this;
     const url = `http://localhost:3003/api/billingCycles`;
+    const numPage = 10;
 
     _self.createBillingCycle = function () {
       $http
@@ -25,12 +27,23 @@
     };
 
     _self.refresh = function () {
-      $http.get(url).then(function (response) {
-        _self.billingCycle = { credits: [{}], debts: [{}] };
-        _self.billingCycles = response.data;
-        _self.calculateValues();
-        tabs.show(_self, { tabList: true, tabCreate: true });
-      });
+      const page = parseInt($location.search().page) || 1;
+      $http
+        .get(`${url}?skip=${(page - 1) * numPage}&limit=${numPage}`)
+        .then(function (response) {
+          _self.billingCycle = { credits: [{}], debts: [{}] };
+          _self.billingCycles = response.data;
+          _self.calculateValues();
+
+          $http
+            .get(`${url}/count`)
+            .then(function (response) {
+              //Arredondamento para +
+              _self.pages = Math.ceil(response.data.value / 10);
+              tabs.show(_self, { tabList: true, tabCreate: true });
+            })
+            .catch(function (resp) {});
+        });
     };
 
     _self.showTabUpdate = function (billingCycle) {
