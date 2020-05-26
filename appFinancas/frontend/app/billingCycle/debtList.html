@@ -4,14 +4,15 @@
       <tr>
         <th>Nome</th>
         <th>Valor</th>
+        <th>Status</th>
         <th>Ações</th>
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="credit in bcCtrl.billingCycle.credits">
+      <tr ng-repeat="debt in bcCtrl.billingCycle.debts">
         <td>
           <input
-            ng-model="credit.name"
+            ng-model="debt.name"
             class="form-control"
             placeholder="Informe o Nome"
             ng-readonly="bcCtrl.tabDelete"
@@ -20,11 +21,21 @@
         </td>
         <td>
           <input
-            ng-model="credit.value"
+            ng-model="debt.value"
             class="form-control"
             placeholder="Informe o Valor"
             ng-readonly="bcCtrl.tabDelete"
             typer="number"
+          />
+        </td>
+
+        <td>
+          <input
+            ng-model="debt.status"
+            class="form-control"
+            placeholder="Informe o status"
+            ng-readonly="bcCtrl.tabDelete"
+            typer="text"
           />
         </td>
         <td class="table-actions">
