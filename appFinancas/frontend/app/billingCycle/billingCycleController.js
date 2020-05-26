@@ -28,17 +28,20 @@
       $http.get(url).then(function (response) {
         _self.billingCycle = { credits: [{}], debts: [{}] };
         _self.billingCycles = response.data;
+        _self.calculateValues();
         tabs.show(_self, { tabList: true, tabCreate: true });
       });
     };
 
     _self.showTabUpdate = function (billingCycle) {
       _self.billingCycle = billingCycle;
+      _self.calculateValues();
       tabs.show(_self, { tabUpdate: true });
     };
 
     _self.showTabDelete = function (billingCycle) {
       _self.billingCycle = billingCycle;
+      _self.calculateValues();
       tabs.show(_self, { tabDelete: true });
     };
 
@@ -78,11 +81,13 @@
     //Copiar
     _self.cloneCredit = (index, { name, value }) => {
       _self.billingCycle.credits.splice(index + 1, 0, { name, value });
+      _self.calculateValues();
     };
     //Delete
     _self.deleteCredit = (index) => {
       if (_self.billingCycle.credits.length > 1) {
         _self.billingCycle.credits.splice(index, 1);
+        _self.calculateValues();
       }
     };
 
@@ -96,11 +101,30 @@
     //Copiar
     _self.cloneDebt = (index, { name, value, status }) => {
       _self.billingCycle.debts.splice(index + 1, 0, { name, value, status });
+      _self.calculateValues();
     };
     //Delete
     _self.deleteDebt = (index) => {
       if (_self.billingCycle.debts.length > 1) {
         _self.billingCycle.debts.splice(index, 1);
+        _self.calculateValues();
+      }
+    };
+
+    _self.calculateValues = () => {
+      _self.credit = 0;
+      _self.debt = 0;
+
+      if (_self.billingCycle) {
+        _self.billingCycle.credits.forEach(function ({ value }) {
+          _self.credit += !value || isNaN(value) ? 0 : parseFloat(value);
+        });
+
+        _self.billingCycle.debts.forEach(function ({ value }) {
+          _self.debt += !value || isNaN(value) ? 0 : parseFloat(value);
+        });
+
+        _self.total = _self.credit - _self.debt;
       }
     };
 
