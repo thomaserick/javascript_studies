@@ -43,7 +43,7 @@
           <button
             class="btn btn-success"
             title="Incluir"
-            ng-class="{disable: bcCtrl.tabDelete}"
+            ng-disabled="bcCtrl.tabDelete"
             ng-click="bcCtrl.addDebt($index)"
           >
             <i class="fa fa-plus"></i>
@@ -52,7 +52,7 @@
           <button
             class="btn btn-warning"
             title="Copiar"
-            ng-class="{disable: bcCtrl.tabDelete}"
+            ng-disabled="bcCtrl.tabDelete"
             ng-click="bcCtrl.cloneDebt($index,debt)"
           >
             <i class="fa fa-clone"></i>
@@ -61,7 +61,7 @@
           <button
             class="btn btn-danger"
             title="Excluir"
-            ng-class="{disable: bcCtrl.tabDelete}"
+            ng-disabled="bcCtrl.tabDelete"
             ng-click="bcCtrl.deleteDebt($index)"
           >
             <i class="fa fa-trash-o"></i>
