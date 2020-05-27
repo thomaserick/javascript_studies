@@ -165,6 +165,11 @@
 - npm install pm2
   - Gerenciador de pacote do nodeJs para produção monitoramento
 - npm node-restful
+- npm install bcrypt@1.0.2
+  - Criptografar senha
+- npm install jsonwebtoken@7.3.0
+
+  - JWT
 
 - npm install nodemon --save-dev
 
