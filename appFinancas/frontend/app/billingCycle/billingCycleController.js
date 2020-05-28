@@ -6,12 +6,13 @@
       "$location",
       "msgs",
       "tabs",
+      "consts",
       BillingCycleController,
     ]);
 
-  function BillingCycleController($http, $location, msgs, tabs) {
+  function BillingCycleController($http, $location, msgs, tabs, consts) {
     const _self = this;
-    const url = `http://localhost:3003/api/billingCycles`;
+    const url = `${consts.apiUrl}/billingCycles`;
     const numPage = 10;
 
     _self.createBillingCycle = function () {
@@ -36,7 +37,7 @@
           _self.calculateValues();
 
           $http
-            .get(`${url}/count`)
+            .get(`${consts.apiUrl}/count`)
             .then(function (response) {
               //Arredondamento para +
               _self.pages = Math.ceil(response.data.value / 10);
@@ -59,7 +60,7 @@
     };
 
     _self.updateBillingCycle = function () {
-      const updateUrl = `${url}/${_self.billingCycle._id}`;
+      const updateUrl = `${consts.apiUrl}/${_self.billingCycle._id}`;
       $http
         .put(updateUrl, _self.billingCycle)
         .then(function (response) {
@@ -72,7 +73,7 @@
     };
 
     _self.deleteBillingCycle = function () {
-      const deleteUrl = `${url}/${_self.billingCycle._id}`;
+      const deleteUrl = `${consts.apiUrl}/${_self.billingCycle._id}`;
       $http
         .delete(deleteUrl, _self.billingCycle)
         .then(function (response) {
