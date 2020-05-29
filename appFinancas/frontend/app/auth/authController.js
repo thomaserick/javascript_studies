@@ -21,13 +21,10 @@
       );
     };
 
-    _self.getUser = () => ({
-      name: "Thomas Erick Mock",
-      email: "thominhaserick@gmail.com",
-    });
+    _self.getUser = () => auth.getUser();
 
     _self.logout = () => {
-      console.log("Logout...");
+      auth.logout(() => msgs.addSuccess("Sucesso!"));
     };
   }
 })();
