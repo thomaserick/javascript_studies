@@ -37,7 +37,7 @@
           _self.calculateValues();
 
           $http
-            .get(`${consts.apiUrl}/count`)
+            .get(`${url}/count`)
             .then(function (response) {
               //Arredondamento para +
               _self.pages = Math.ceil(response.data.value / 10);
