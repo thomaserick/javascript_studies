@@ -3,7 +3,8 @@ angular
   .config([
     "$stateProvider",
     "$urlRouterProvider",
-    function ($stateProvider, $urlRouterProvider) {
+    "$httpProvider",
+    function ($stateProvider, $urlRouterProvider, $httpProvider) {
       $stateProvider
         .state("dashboard", {
           url: "/dashboard",
@@ -13,7 +14,9 @@ angular
           url: "/billingCycles?page",
           templateUrl: "billingCycle/tabs.html",
         });
-      $urlRouterProvider.otherwise("/dashboard");
+
+      $httpProvider.interceptors.push("handleResponseError");
+      //$urlRouterProvider.otherwise("/");
     },
   ])
   .run([
@@ -28,9 +31,8 @@ angular
 
       function validateUser() {
         const user = auth.getUser();
-        const authPage = "/auth.html#!/dashboard";
+        const authPage = "/auth.html";
         const isAuthPage = $window.location.href.endsWith(authPage);
-
         if (!user && !isAuthPage) {
           $window.location.href = authPage;
         } else if (user && !user.isValid) {
