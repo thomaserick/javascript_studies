@@ -1,20 +1,24 @@
 (function () {
   angular
     .module("App")
-    .controller("AuthCtrl", ["$location", "msgs", AuthController]);
+    .controller("AuthCtrl", ["$location", "msgs", "auth", AuthController]);
 
-  function AuthController($location, msgs) {
+  function AuthController($location, msgs, auth) {
     const _self = this;
     _self.loginMode = true;
 
     _self.changeMode = () => (_self.loginMode = !_self.loginMode);
 
     _self.login = () => {
-      console.log(`Login.... ${_self.user.email}`);
+      auth.login(_self.user, (err) =>
+        err ? msgs.addError(err) : msgs.addSuccess("Sucesso!")
+      );
     };
 
     _self.signup = () => {
-      console.log(`Signup... ${_self.user.email}`);
+      auth.signup(_self.user, (err) =>
+        err ? msgs.addError(err) : msgs.addSuccess("Sucesso!")
+      );
     };
 
     _self.getUser = () => ({
