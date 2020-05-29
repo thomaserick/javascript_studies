@@ -11,20 +11,19 @@
 
     _self.login = () => {
       auth.login(_self.user, (err) =>
-        err ? msgs.addError(err) : msgs.addSuccess("Sucesso!")
+        err ? msgs.addError(err) : $location.path("/")
       );
     };
 
     _self.signup = () => {
       auth.signup(_self.user, (err) =>
-        err ? msgs.addError(err) : msgs.addSuccess("Sucesso!")
+        err ? msgs.addError(err) : $location.path("/")
       );
     };
-
     _self.getUser = () => auth.getUser();
 
     _self.logout = () => {
-      auth.logout(() => msgs.addSuccess("Sucesso!"));
+      auth.logout(() => $location.path("/"));
     };
   }
 })();
